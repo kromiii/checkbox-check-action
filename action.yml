@@ -1,0 +1,19 @@
+name: 'PR Checkbox Checker'
+description: 'Checks if all checkboxes in a pull request description are checked'
+author: 'kromiii'
+
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+    default: ${{ github.token }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check boxes
+      shell: bash
+      run: ${{ github.action_path }}/check-boxes.sh
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
