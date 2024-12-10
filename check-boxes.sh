@@ -27,6 +27,6 @@ if echo "$PR_BODY" | grep -q "\[ \]"; then
   echo "Error: Found unchecked checkboxes in the pull request description"
   exit 1
 else
-  echo "All checkboxes are checked!"
+  echo "All checkboxes are filled!"
   exit 0
 fi
