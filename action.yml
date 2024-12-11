@@ -18,6 +18,8 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Set execute permission
+      run: chmod +x ${{ github.action_path }}/check-boxes.sh
     - name: Check boxes
       shell: bash
       run: ${{ github.action_path }}/check-boxes.sh
