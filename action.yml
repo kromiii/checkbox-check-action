@@ -1,8 +1,9 @@
 name: "PR Checkbox Checker"
 description: "Checks if all checkboxes in a pull request description are checked"
 author: "kromiii"
-icon: "check-circle"
-color: "green"
+branding:
+  icon: "check-circle"
+  color: "green"
 
 inputs:
   github-token:
