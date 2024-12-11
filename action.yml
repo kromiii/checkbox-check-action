@@ -10,7 +10,7 @@ inputs:
   github-api-url:
     description: "GitHub API URL (for GitHub Enterprise Server)"
     required: false
-    default: "https://api.github.com"
+    default: ${{ github.api_url }}
 
 runs:
   using: "composite"
